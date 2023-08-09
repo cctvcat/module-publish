@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace 'module_b'
+    namespace 'luckyasme.module_publish.b'
     compileSdk 33
 
     defaultConfig {

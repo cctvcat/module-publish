@@ -33,6 +33,7 @@ android {
 }
 
 dependencies {
+    implementation 'com.github.luckyasme:module-publish:1.0.001'
 
     implementation 'androidx.core:core-ktx:1.8.0'
     implementation 'androidx.appcompat:appcompat:1.4.1'

@@ -19,3 +19,4 @@ jobs:
           release-type: simple
           package-name: v${{ github.ref_name }}
           target-branch: ${{ github.ref_name }}
+

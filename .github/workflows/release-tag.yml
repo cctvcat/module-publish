@@ -11,7 +11,8 @@ jobs:
     name: Create Release
     runs-on: ubuntu-latest
     steps:
-      - run: echo "${{ github }}"
+      - name: echo github
+      - run: echo "${{ toJSON(github) }}"
 
       - name: Checkout Code
         uses: actions/checkout@v3

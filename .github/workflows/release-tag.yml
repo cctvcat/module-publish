@@ -11,10 +11,11 @@ jobs:
     name: Create Release
     runs-on: ubuntu-latest
     steps:
-      - name: echo github
+      - name: Output
       - env:
           GITHUB_CONTEXT: ${{ toJSON(github) }}
-      - run: echo "GITHUB_CONTEXT"
+      - run: | 
+          echo "GITHUB_CONTEXT"
 
       - name: Checkout Code
         uses: actions/checkout@v3

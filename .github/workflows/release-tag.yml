@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Output
-        run: git tag -l --format='%(contents)' ${{ github.ref }}
+        run: git tag -l --format='%(contents)' ${{ github.ref_name }}
 
       - name: Checkout Code
         uses: actions/checkout@v3
@@ -22,8 +22,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
         with:
-          tag_name: ${{ github.ref }}
-          release_name: v${{ github.ref }}
+          tag_name: ${{ github.ref_name }}
+          release_name: v${{ github.ref_name }}
           body: |
             Please refer to [CHANGELOG.md](https://github.com/f5l5y5/axios-abort/blob/main/CHANGELOG.md) for details.
           draft: false

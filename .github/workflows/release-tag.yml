@@ -11,7 +11,7 @@ jobs:
     name: Create Release
     runs-on: ubuntu-latest
     steps:
-      - run: echo "git tag -l --format='%(contents)' ${{ github.ref }}"
+      - run: echo "${{ github }}"
 
       - name: Checkout Code
         uses: actions/checkout@v3

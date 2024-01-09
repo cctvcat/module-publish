@@ -11,10 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Output
-        env:
-          GITHUB_CONTEXT: ${{ toJSON(github) }}
-        run: | 
-          echo "GITHUB_CONTEXT"
+        run: git tag -l --format='%(contents)' ${{ github.ref }}
 
       - name: Checkout Code
         uses: actions/checkout@v3

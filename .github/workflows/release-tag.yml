@@ -5,13 +5,16 @@ on:
     tags:
       - '*'
 
+
 jobs:
   build:
     name: Create Release
     runs-on: ubuntu-latest
     steps:
       - name: echo github
-      - run: echo "${{ toJSON(github) }}"
+      - env:
+          GITHUB_CONTEXT: ${{ toJSON(github) }}
+      - run: echo "GITHUB_CONTEXT"
 
       - name: Checkout Code
         uses: actions/checkout@v3
